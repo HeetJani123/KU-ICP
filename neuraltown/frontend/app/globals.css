@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 78% 6%;
+    --foreground: 210 40% 92%;
+    --card: 222 56% 9%;
+    --card-foreground: 210 40% 92%;
+    --popover: 222 56% 9%;
+    --popover-foreground: 210 40% 92%;
+    --primary: 188 94% 62%;
+    --primary-foreground: 222 92% 8%;
+    --secondary: 268 79% 72%;
+    --secondary-foreground: 222 92% 8%;
+    --muted: 222 45% 18%;
+    --muted-foreground: 216 40% 75%;
+    --accent: 199 89% 65%;
+    --accent-foreground: 222 92% 8%;
+    --destructive: 0 82% 60%;
+    --destructive-foreground: 210 40% 96%;
+    --border: 222 45% 18%;
+    --input: 222 45% 18%;
+    --ring: 188 94% 62%;
+    --radius: 0.5rem;
+    --chart-1: 188 94% 62%;
+    --chart-2: 268 79% 72%;
+    --chart-3: 199 89% 65%;
+    --chart-4: 158 69% 55%;
+    --chart-5: 328 82% 68%;
+  }
+  .dark {
+    --background: 210 33% 98%;
+    --foreground: 222 47% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 10%;
+    --primary: 222 92% 8%;
+    --primary-foreground: 210 40% 96%;
+    --secondary: 210 40% 92%;
+    --secondary-foreground: 222 92% 8%;
+    --muted: 210 36% 92%;
+    --muted-foreground: 222 47% 35%;
+    --accent: 199 89% 65%;
+    --accent-foreground: 222 92% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 96%;
+    --border: 210 36% 85%;
+    --input: 210 36% 85%;
+    --ring: 222 92% 36%;
+    --chart-1: 222 83% 58%;
+    --chart-2: 188 94% 62%;
+    --chart-3: 268 79% 72%;
+    --chart-4: 158 69% 55%;
+    --chart-5: 328 82% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.inner-thought {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #7c7caa;
+}
+
+.karma-positive {
+  color: #d4a574;
+}
+
+.karma-negative {
+  color: #c47070;
+}
+
+.relationship-positive {
+  color: #6bbd8a;
+}
+
+.relationship-negative {
+  color: #c47070;
+}
+
+.love {
+  color: #d48ab5;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(58, 58, 90, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(58, 58, 90, 0.8);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Spline Loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(58, 58, 90, 0.3);
+  border-top-color: rgba(188, 94, 162, 0.8);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
